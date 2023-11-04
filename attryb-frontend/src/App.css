@@ -1,21 +1,21 @@
 .navbar {
-  background: linear-gradient(to right,#8698cb, #93cfee, #a6c1e7,#93bbf2);
+  background: linear-gradient(to right,#edf0f8, #e4f1f8, #d3e1f4,#e9f1fc);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: 80px;
+  height: 75px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 25px;
   color: white;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
 
 
 .text{
   cursor: pointer;
   font-weight: bold;
-  background: linear-gradient(to right, #03474c, #287cea,#0f656b); /* Replace these colors with your desired gradient colors */
-  -webkit-background-clip: text; /* For Safari */
+  background: linear-gradient(to right, #03474c, #287cea,#0f656b); 
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
@@ -25,48 +25,56 @@
   font-weight: bold;
   position: relative;
   display: inline-block;
-  color: initial; /* Preserve the original text color */
+  color: initial; 
 }
 
 .active-text::after {
   content: "";
   position: absolute;
   left: 0;
-  right: 100%; /* Initially hidden to the right */
-  bottom: -4px; /* Increase the distance of the underline from the text for a larger underline */
+  right: 100%; 
+  bottom: -4px; 
   background: linear-gradient(to right, #42034c, #c328ea, #680f6b);
-  height: 3px; /* Increase the thickness of the underline for a larger effect */
-  transition: right 0.3s ease-in-out; /* Animation transition from left to right */
+  height: 3px; 
+  transition: right 0.3s ease-in-out; 
 }
 
 .active-text:hover::after,
 .active-text::after {
-  right: 0; /* Expand the underline when the link is hovered or active */
+  right: 0; 
+  animation: underlineAnimation 0.3s forwards; 
 }
 
+@keyframes underlineAnimation {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
 
 .Heading {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  color: rgb(20, 157, 221);
+  margin-top: 60px;
+  margin-bottom: 5px;
+color: rgb(0, 76, 139);
 }
-.formBox {
-  width: 300px;
-  margin: auto;
-  margin-top: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  /* padding: 40px 55px; */
-  padding-left: 25px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-radius: 10px;
-  
-  /* border: 2px solid black; */
+
+.newcar{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-.textt{
-text-align: center;
+.textt {
+  text-align: center;
+  background: linear-gradient(to right, red,rgb(0, 0, 0),yellow); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
+
+
 .formBox input {
   width: 90%;
   padding: 6px;
@@ -104,6 +112,12 @@ text-align: center;
   justify-content: space-evenly;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-width: 2px; 
+  border-image: linear-gradient(45deg, red, aqua, white);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, red, aqua, white);
+  animation: moveBorder 4s linear infinite; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .addCar_container > div {
   width: 45%;
@@ -261,13 +275,62 @@ text-align: center;
 
 
 .signup-page {
-  background-image: url('https://img.freepik.com/free-vector/blue-wall-with-spot-lights-background_52683-42963.jpg?size=626&ext=jpg&ga=GA1.1.416166824.1699112599&semt=ais'); 
-  /* background-size: cover; */
   background-position: center;
   background-repeat: no-repeat;
-  border: 0.1px solid #6D7EAA;
+  border: 0.1px solid rgb(214, 211, 211);
   height: 100vh;
   background-size: cover;
+
 }
 
 
+.login-page {
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0.1px solid rgb(214, 211, 211);
+  height: 100vh;
+  background-size: cover;
+
+}
+
+
+.formBox {
+  width: 450px;
+  margin: auto;
+  margin-top: 30px;
+  padding-left: 35px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  border-width: 3.5px; 
+  border-image: linear-gradient(45deg, red, aqua, white);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, red, aqua, white);
+  animation: moveBorder 4s linear infinite; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@keyframes moveBorder {
+  0% {
+    border-image-source: linear-gradient(45deg, red, white, aqua);
+    background-position: 0% 0%;
+  }
+  25% {
+    border-image-source: linear-gradient(45deg, white, aqua, red);
+    background-position: 100% 0%;
+  }
+  50% {
+    border-image-source: linear-gradient(45deg,  aqua, white, red);
+    background-position: 100% 100%;
+  }
+  75% {
+    border-image-source: linear-gradient(45deg, red, aqua, white);
+    background-position: 0% 100%;
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, aqua, white, red);
+    background-position: 0% 0%;
+  }
+}

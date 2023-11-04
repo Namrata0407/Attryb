@@ -68,6 +68,8 @@ const Signup = () => {
      <Text className='textt' fontSize={'lg'} color={'gray.600'}>
             to enjoy all of our cool features ✌️
           </Text>
+
+        
       <div className="formBox">
       
         <form onSubmit={handleSubmit}>
@@ -107,6 +109,9 @@ const Signup = () => {
 
         
       </div>
+
+
+
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Heading, useToast } from "@chakra-ui/react";
+import { Heading, Text, useToast } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -75,8 +75,11 @@ const Login = () => {
  
 
   return (
-    <div>
+    <div className="login-page">
       <Heading className="Heading">Login Form</Heading>
+      <Text className='textt' fontSize={'lg'} color={'gray.600'}>
+            to enjoy all of our cool features ✌️
+          </Text>
       <div className="formBox">
         <form onSubmit={handleSubmit}>
           <label>Enter Email</label>
