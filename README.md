@@ -22,7 +22,7 @@ BUYC Corp is a marketplace for second-hand cars, where dealers list their invent
 - **LogOut butotn:** User can logout from here.
   
 ### Add Car Page
-![addCar](https://github.com/Namrata0407/Attryb/assets/112812835/72ed53d8-0551-43d6-bb39-9ef519d74f73)
+![addcar](https://github.com/Namrata0407/Attryb/assets/112812835/11ebd0a9-15dc-4ba0-8448-4d1da4402eb1)
 
 ### Car Details Page
 ![detailsOFcar](https://github.com/Namrata0407/Attryb/assets/112812835/680b5183-abaa-4e99-a86a-f6efceb9ac0f)
