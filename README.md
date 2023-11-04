@@ -16,7 +16,7 @@ BUYC Corp is a marketplace for second-hand cars, where dealers list their invent
 ### Home Page
 ![Home Page](images/home_page.png)
 
-- **Add Car Button:** Users can click this button to add new cars with their specifications.
+- **Add Car Button:** Only authenticated users can add new cars with their specifications.
 - **Card Options:**
   - **Delete:** Clicking on this option will delete the selected car listing.
   - **See Details:** Users can view more information about a car in a dedicated page.
