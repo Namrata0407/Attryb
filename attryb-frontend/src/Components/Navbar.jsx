@@ -15,6 +15,7 @@ const Navbar = () => {
     }
   }, [token]);
 
+  //logout function 
   const handleLogout = () => {
     localStorage.removeItem("buyCarToken");
     localStorage.removeItem("detailsPage");
