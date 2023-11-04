@@ -1,4 +1,4 @@
-import { Box, Button, Spinner } from "@chakra-ui/react";
+import { Box, Button, Select, Spinner, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -103,6 +103,39 @@ const Home = () => {
     <div>
       <Box className="add_car">
 
+        <div>
+        <label style={{display:"flex",alignItems:"center"}}>
+           <Text style={{width:"120px",fontWeight:"bold"}}> Filter by color :</Text>
+            <Select w={"70px"} >
+              <option value="">All</option>
+              <option value="Red">Red</option>
+              <option value="Blue">Blue</option>
+              <option value="Yellow">Yellow</option>
+              <option value="Green">Green</option>
+              <option value="Orange">Orange</option>
+              <option value="Black">Black</option>
+              <option value="White">White</option>
+              <option value="Grey">Grey</option>
+              <option value="Purple">Purple</option>
+            </Select>
+          </label>
+        </div>
+
+        <div>
+          <label style={{display:"flex",alignItems:"center"}}>
+           <Text style={{width:"120px",fontWeight:"bold"}}> Sort by Price :</Text>
+            <Select w={"70px"}>
+              <option value="">All</option>
+              <option value="1">ASC</option>
+              <option value="-1">DESC</option>
+
+            </Select>
+          </label>
+        </div>
+
+
+
+
         <Button
           style={{ backgroundColor: "rgb(5, 51, 94)", color: "white" }}
           onClick={addCarPage}
@@ -132,7 +165,7 @@ const Home = () => {
                 <button className="homepage_icon_btn" onClick={() => handleCarDelete(el)} ><MdDelete /></button>
                 <button onClick={() => detailsPage(el)}>See Details</button>
                 {/* <button className="homepage_icon_btn" onClick={() => handleCarEdit(el)}><MdEdit /></button> */}
-                <EdtModal el={el}/>
+                <EdtModal el={el} />
               </div>
 
             </div>

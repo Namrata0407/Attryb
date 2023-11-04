@@ -99,11 +99,11 @@ color: rgb(0, 76, 139);
 }
 .add_car {
   display: flex;
-  justify-content: end;
+  justify-content: space-evenly;
   width: 85%;
   margin: auto;
   margin-top: 40px;
-  border: 3px solid red;
+  /* border: 3px solid red; */
 }
 .addCar_container {
   width: 85%;
