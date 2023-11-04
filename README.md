@@ -1,7 +1,5 @@
 # BUYC Corp - Second-Hand Car Marketplace
 
-![BUYC Corp Logo](images/buycorp_logo.png)
-
 BUYC Corp is a marketplace for second-hand cars, where dealers list their inventory of second-hand cars, and buyers can explore, purchase, and manage their car listings on buycars.com. This project is built using ReactJS for the front end and Node.js, Express.js, and MongoDB for the backend.
 
 
