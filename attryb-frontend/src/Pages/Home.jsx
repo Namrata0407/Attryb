@@ -65,7 +65,7 @@ const handleCarDelete = async(el)=>{
     else if(res == "Not Authorized to delete"){
       toast({
         title: `${res}`,
-        description: "You are Not authorized",
+        description: "You can only delete the data which you have added !",
         status: 'warning',
         duration: 2000,
         isClosable: true,
@@ -118,13 +118,15 @@ const handleCarEdit = async(el)=>{
   return (
     <div>
       <Box className="add_car">
-        <Button
+
+ <Button
           style={{ backgroundColor: "rgb(5, 51, 94)", color: "white" }}
           onClick={addCarPage}
         >
           {" "}
           Add Car{" "}
         </Button>
+
       </Box>
 
       <Box className="homePage_cars_container">

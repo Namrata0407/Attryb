@@ -68,6 +68,7 @@ const AddCar = () => {
             status: "success",
             duration: 2000,
             isClosable: true,
+            position:"top"
           });
           setObj({
             km_odoMeter: "",
@@ -185,7 +186,7 @@ const AddCar = () => {
           <input
             type="number"
             value={obj.major_scratches}
-            placeholder="Enter email"
+            placeholder="No. of Major Scratches"
             name="major_scratches"
             onChange={handleDetails}
           />
@@ -253,7 +254,7 @@ const AddCar = () => {
             onChange={handleCarModel}
             placeholder="Search car OEM"
           />{" "}
-          <input type="button" value="Search" onClick={SearchCarModel} /> <br />
+          <input type="button" className="searchvalue" value="Search" onClick={SearchCarModel} /> <br />
           {carData &&
             carData.map((el) => (
               <div key={el._id} onClick={() => addOEM(el)} className="carList">

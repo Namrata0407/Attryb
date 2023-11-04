@@ -100,9 +100,10 @@ color: rgb(0, 76, 139);
 .add_car {
   display: flex;
   justify-content: end;
-  width: 90%;
+  width: 85%;
   margin: auto;
   margin-top: 40px;
+  border: 3px solid red;
 }
 .addCar_container {
   width: 85%;
@@ -207,12 +208,13 @@ color: rgb(0, 76, 139);
   font-size: 25px;
 }
 .details_btn > button:nth-child(2){
-  width: 30%;
+  /* width: 30%; */
   color: whitesmoke;
   background-color: rgb(20, 157, 221);
   font-size: 18px;
-  padding: 6px;
+  padding: 7px;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .details_btn > button:nth-child(2):hover {
@@ -273,7 +275,11 @@ color: rgb(0, 76, 139);
   color: rgb(24, 196, 8);
 }
 
-
+.searchvalue{
+  background-color: #3182CE;
+  color: white;
+  cursor: pointer;
+}
 .signup-page {
   background-position: center;
   background-repeat: no-repeat;
@@ -334,3 +340,4 @@ color: rgb(0, 76, 139);
     background-position: 0% 0%;
   }
 }
+

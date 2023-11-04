@@ -37,7 +37,7 @@ const Login = () => {
       if (res.data.message == "login Successful") {
         toast({
           title: "Login Successfully",
-          description: "Success",
+          description: "Welcome to HomePage",
           status: "success",
           duration: 2000,
           isClosable: true,

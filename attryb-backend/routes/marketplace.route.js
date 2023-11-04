@@ -35,7 +35,7 @@ marketplaceRoute.delete("/:id",async(req,res)=>{
         
         if(findData){
             if(findData.author == req.body.author){
-                // const DeleteData = await MarketPlace.findByIdAndDelete({_id:id});
+                const DeleteData = await MarketPlace.findByIdAndDelete({_id:id});
                 res.status(200).send("Deleted Successfully")
             }
             else{

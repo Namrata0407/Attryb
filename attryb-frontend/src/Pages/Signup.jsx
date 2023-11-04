@@ -39,7 +39,7 @@ const Signup = () => {
     if(res.data.message == "Dealer regestred successfully"){
       toast({
         title: 'Registered Successfully',
-        description: "Success",
+        description: "Please login now",
         status: 'success',
         duration: 2000,
         isClosable: true,
