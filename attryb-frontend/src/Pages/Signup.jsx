@@ -63,7 +63,7 @@ const Signup = () => {
   }
 
   return (
-    <div>
+    <div className="signup-page">
      <Heading className="Heading">Signup Form</Heading>
      <Text className='textt' fontSize={'lg'} color={'gray.600'}>
             to enjoy all of our cool features ✌️
@@ -104,6 +104,8 @@ const Signup = () => {
           <Link to="/login" >Already have account? <span className='login_link' >Click</span></Link>
           <input type="submit" value="Register" />
         </form>
+
+        
       </div>
     </div>
   );
