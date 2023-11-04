@@ -26,6 +26,38 @@ marketplaceRoute.get("/",async(req,res)=>{
         res.status(400).send("someting went wrong")
     }
 })
+
+
+//--------------------------Update car data --------------------------------------------------//
+
+marketplaceRoute.patch("/:id", async (req, res) => {
+    const { id } = req.params;
+    const payload = req.body;
+
+    //    console.log(id);
+    
+    try {
+        // console.log(id,payload);
+        const findData = await MarketPlace.findById(id)
+        // console.log(findData);
+        if (findData) {
+            if (findData.author == req.body.author) {
+                const UpdatedData = await MarketPlace.findByIdAndUpdate(id,payload);
+                res.status(200).send("Updated Successfully")
+            }
+            else {
+                res.send("Not Authorized to Update")
+            }
+        }
+        else {
+            res.status(400).send("Data not found")
+        }
+    } catch (err) {
+        res.status(400).send("someting went wrong")
+    }
+})
+
+
 //-------------------------- DELETE car data  ----------------------------------------------//
 marketplaceRoute.delete("/:id",async(req,res)=>{
     const {id} = req.params

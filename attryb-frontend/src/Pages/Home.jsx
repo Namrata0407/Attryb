@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { MdDelete, MdEdit } from "react-icons/md";
 import { useToast } from '@chakra-ui/react'
+import EdtModal from "../Components/EditModal";
 
 const Home = () => {
   const [carData, setCarData] = useState([]);
@@ -79,9 +80,7 @@ const Home = () => {
     }
   };
   //--------------------------  Delete functionality --------------------------------//
-  const handleCarEdit = async (el) => {
 
-  }
 
   if (loading) return <Box
     height="120px"
@@ -132,7 +131,8 @@ const Home = () => {
               <div className="details_btn">
                 <button className="homepage_icon_btn" onClick={() => handleCarDelete(el)} ><MdDelete /></button>
                 <button onClick={() => detailsPage(el)}>See Details</button>
-                <button className="homepage_icon_btn" onClick={() => handleCarEdit(el)}><MdEdit /></button>
+                {/* <button className="homepage_icon_btn" onClick={() => handleCarEdit(el)}><MdEdit /></button> */}
+                <EdtModal el={el}/>
               </div>
 
             </div>
