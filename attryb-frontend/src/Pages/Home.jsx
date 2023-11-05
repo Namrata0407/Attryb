@@ -14,7 +14,6 @@ const Home = () => {
   const nav = useNavigate();
   const toast = useToast()
 
-
   const addCarPage = () => {
     nav("/addcar");
   };
