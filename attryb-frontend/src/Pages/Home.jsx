@@ -15,7 +15,6 @@ const Home = () => {
   const toast = useToast()
 
 
-  // console.log(dealer_price, original_paint)
   const addCarPage = () => {
     nav("/addcar");
   };
@@ -178,7 +177,6 @@ const Home = () => {
               <div className="details_btn">
                 <button className="homepage_icon_btn" onClick={() => handleCarDelete(el)} ><MdDelete /></button>
                 <button onClick={() => detailsPage(el)}>See Details</button>
-                {/* <button className="homepage_icon_btn" onClick={() => handleCarEdit(el)}><MdEdit /></button> */}
                 <EdtModal el={el} />
               </div>
 
