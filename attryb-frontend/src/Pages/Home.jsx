@@ -9,24 +9,35 @@ import EdtModal from "../Components/EditModal";
 const Home = () => {
   const [carData, setCarData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [dealer_price,setdealer_price] = useState("");
+  const [original_paint, setoriginal_paint] = useState("");
   const nav = useNavigate();
   const toast = useToast()
 
+
+  // console.log(dealer_price, original_paint)
   const addCarPage = () => {
     nav("/addcar");
   };
 
   useEffect(() => {
     fetchCarData();
-  }, [carData.length]);
+  }, [carData.length,dealer_price,original_paint]);
 
   const fetchCarData = async () => {
     setLoading(true);
+    let obj = {
+      dealer_price,
+      original_paint
+    }
+    const queryString = new URLSearchParams(obj).toString();
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_BASE_URL}/marketplace`
+        `${process.env.REACT_APP_BASE_URL}/marketplace?${queryString}`
+
       );
       const res = response.data;
+      console.log(res);
       setCarData(res);
       setLoading(false);
     } catch (error) {
@@ -99,6 +110,9 @@ const Home = () => {
       size="xl"
     />
   </Box>;
+
+
+
   return (
     <div>
       <Box className="add_car">
@@ -106,9 +120,9 @@ const Home = () => {
         <div>
         <label style={{display:"flex",alignItems:"center"}}>
            <Text style={{width:"120px",fontWeight:"bold"}}> Filter by color :</Text>
-            <Select w={"70px"} >
+            <Select w={"91x"} value={original_paint} onChange={(e)=>setoriginal_paint(e.target.value)} >
               <option value="">All</option>
-              <option value="Red">Red</option>
+              <option value="red">Red</option>
               <option value="Blue">Blue</option>
               <option value="Yellow">Yellow</option>
               <option value="Green">Green</option>
@@ -124,7 +138,7 @@ const Home = () => {
         <div>
           <label style={{display:"flex",alignItems:"center"}}>
            <Text style={{width:"120px",fontWeight:"bold"}}> Sort by Price :</Text>
-            <Select w={"70px"}>
+            <Select w={"90px"} value={dealer_price} onChange={(e)=>setdealer_price(e.target.value)}>
               <option value="">All</option>
               <option value="1">ASC</option>
               <option value="-1">DESC</option>
@@ -170,7 +184,12 @@ const Home = () => {
 
             </div>
           ))}
+
+
+         
       </Box>
+
+      {carData.length==0 && <div style={{textAlign:"center",fontSize:"30px",fontWeight:"bold",color:"red"}}><h1>No data found...</h1></div>}
     </div>
   );
 };

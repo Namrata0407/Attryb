@@ -223,6 +223,8 @@ color: rgb(0, 76, 139);
 .homepage_icon_btn:hover{
   background-color: rgb(201, 215, 221);
 }
+
+
 /*--------------------------------- Details Page css ------------------------------- */
 .details_page_container {
   width: 90%;

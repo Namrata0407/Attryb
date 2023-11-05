@@ -19,7 +19,10 @@ marketplaceRoute.get("/", async (req, res) => {
         const query = {};
 
         if (req.query.original_paint) {
-            query.original_paint = req.query.original_paint;
+            // query.original_paint = req.query.original_paint;
+            query.original_paint = {
+                $regex: new RegExp(req.query.original_paint, 'i') // 'i' for case-insensitive search
+            };
         }
 
 
