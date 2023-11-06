@@ -6,13 +6,13 @@ BUYC Corp is a marketplace for second-hand cars, where dealers list their invent
 ## Pages Screenshots
 
 ### Signup Page
-![signupPage](https://github.com/Namrata0407/Attryb/assets/112812835/b4f355c7-f80e-46da-ac69-d354c79a5914)
+![signupPage](https://github.com/Namrata0407/Attryb/assets/112812835/a552fd23-48a5-4688-a7dd-37379f887e82)
 
 ### Login Page
-![loginPage](https://github.com/Namrata0407/Attryb/assets/112812835/720bcdd4-9a71-48d0-b619-f2e124aba145)
+![loginPage](https://github.com/Namrata0407/Attryb/assets/112812835/a0d6767a-1e5b-4db8-9530-d83ecc8e489e)
 
 ### Home Page
-![homepage](https://github.com/Namrata0407/Attryb/assets/112812835/d8f9f788-40dc-4b6f-9ce7-99a5871e383b)
+![homepage](https://github.com/Namrata0407/Attryb/assets/112812835/0009be74-1fa5-4b35-8b0a-b31af33009ac)
 
 - **Add Car Button:** Only authenticated users can add new cars with their specifications.
 - **Card Options:**
@@ -22,10 +22,10 @@ BUYC Corp is a marketplace for second-hand cars, where dealers list their invent
 - **LogOut butotn:** User can logout from here.
   
 ### Add Car Page
-![addcar](https://github.com/Namrata0407/Attryb/assets/112812835/11ebd0a9-15dc-4ba0-8448-4d1da4402eb1)
+![addcar](https://github.com/Namrata0407/Attryb/assets/112812835/1747bbcc-07b4-4252-8c1c-e6946d5feac6)
 
 ### Car Details Page
-![detailsOFcar](https://github.com/Namrata0407/Attryb/assets/112812835/680b5183-abaa-4e99-a86a-f6efceb9ac0f)
+![detailsOFcar](https://github.com/Namrata0407/Attryb/assets/112812835/46331e71-a856-4c5f-8f40-bc10273ae847)
 
 ## Features
 
